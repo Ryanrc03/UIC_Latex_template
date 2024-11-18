@@ -1,5 +1,5 @@
 # UIC_LaTeX_Template: Project Overview
-![logo](UIC_only.png)
+
 
 ## Project Background
 
