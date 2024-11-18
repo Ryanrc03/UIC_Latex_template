@@ -1,9 +1,11 @@
 # UIC_LaTeX_Template: Project Overview
+![logo](uic_only.png)
 
 ## Project Background
 
 **UIC_LaTeX_Template** is designed to help **UIC (United International College)** students quickly and efficiently create professional-looking documents for graduate school applications. This project provides customizable LaTeX templates for CVs, personal statements, and recommendation letters, ensuring a polished appearance while reducing the time spent on formatting.
 
+![bg](uic_school.png)
 ## Goals
 
 - **Streamline the writing process**: Offer ready-to-use LaTeX templates for essential application documents.
