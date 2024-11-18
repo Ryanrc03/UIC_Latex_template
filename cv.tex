@@ -1,0 +1,238 @@
+%-------------------------
+% Resume in Latex
+% Author : Vaishanth
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}%\setmainfont{Times New Roman}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{calc} 
+\usepackage{graphicx}
+
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{cochineal}
+% \usepackage{fourier}
+
+% \usepackage{fontspec}
+% \usepackage{polyglossia}
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+
+\definecolor{UG}{HTML}{367B6D}
+\definecolor{UB}{HTML}{3472AF}
+\definecolor{USC}{HTML}{972C37}
+\definecolor{Link}{HTML}{2A1EB1}
+
+
+
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item[\small$\bullet$]\small{
+    {#1 \vspace{-1.5pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSingleSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textit{\small #2} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------\usepackage{fontspec}
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+% 在左上角插入图片
+% \begin{tikzpicture}[remember picture, overlay]
+%     \node[anchor=north east] at ($(current page.north east)+(-0.3cm,-0.1cm)$) {\includegraphics[height=2cm]{img/UIC_only.png}};
+% \end{tikzpicture}
+% \vspace{-20pt}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west] at ($(current page.north west)+(0.8cm,-0.1cm)$) {\includegraphics[height=2cm]{img/UIC_only.png}};
+\end{tikzpicture}
+\vspace{-20pt}
+
+\begin{center}
+    {\Huge \color{UG}\textbf{T}Tao} \\ \vspace{2pt} 
+    {\color{UG}\faIcon{phone-square-alt}}
+    {+86 18988888888} ~ 
+    % \small{-} ~
+    % \href{[url to portfolio]}{\color{black}{Portfolio}} ~ 
+    % \small{-}
+    {\color{UG}\faIcon{envelope}} 
+    {r@gmail.com} ~
+    % {\color{UG}\faIcon{home}} 
+    % {Guangzhou} ~ 
+    % \\
+
+    {\color{UG}\faIcon{github}}
+    \href{}{\color{UG}{\textbf{Github}}} ~
+    {\color{UG}\faIcon{linkedin}} 
+    \href{}{\color{UG}{\textbf{Linkedin}}}  ~
+    {\color{UG}\faIcon{graduation-cap}}
+    \href{}{\color{UG}{\textbf{Google Scholar}}} ~
+    {\color{UG}\faIcon{researchgate}}
+    \href{}{\color{UG}{\textbf{Research Gate}}} ~
+    {\color{UG}\faIcon{instagram-square}}
+    \href{}{\color{UG}{\textbf{Instagram}}} ~
+    {\color{UG}\faIcon{globe}}
+    \href{}{\color{UG}{\textbf{Personal Website}}} ~
+    
+    \vspace{-15pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\color{UG}\textbf{Education}}
+
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\selectfont BNU-HKBU United International College(UIC)}{Zhuhai, China}
+      {\selectfont Bachelor of Science (Honors) in Computer Science and Technology}{Sep 2021 - Present}
+      
+    \vspace{-10pt}
+    
+    \resumeItemListStart
+            \resumeItem{\normalsize{Cumulative GPA: 4.01/4}}
+            \resumeItem{\normalsize{Scholarship}: }
+      \resumeItemListEnd  
+    
+  \resumeSubHeadingListEnd
+  \vspace{-30pt}
+
+ 
+
+
+\begin{center}
+    {\color{Red}{\textbf{\faIcon{handshake} Thank you for taking the time to read my resume!}}}
+\end{center}
+
+\end{document}
